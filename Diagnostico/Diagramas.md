@@ -54,6 +54,7 @@ IU<--Controller: Inicio Correcto
 # Registrar reserva
 
 title REGISTRAR RESERVA
+
 PersonaCliente->IU:Ingresar fecha
 
 IU-->Controller: ServiciosDisponibles(fecha)
