@@ -4,6 +4,32 @@
 
 # Diagramas de Secuencia
 
-![Captura de pantalla (883)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/2062d881-0901-47f7-92f2-d52212c53377)
+Registrar Guia
 
-![Captura de pantalla (885)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/d7dac8d4-e121-4f6f-86b7-71b017234a62)
+title REGISTRAR GUIA	
+PersonaGuia->IU:Ingresar datos
+IU-->Controller:ValidadDatos(datos)
+Controller -->ValidadorAfip: BuscarCuit(Cuit)
+ValidadorAfip -->Contribuyente: New
+Controller<--ValidadorAfip: Contribuyente
+Controller<--Controller: Comparar datos
+Controller-->Guia: New
+IU<--Controller: Pedir Contraseña
+IU-->Controller: Contraseña
+Controller-->Persistencia: Guardar Guia
+
+Registrar Usuario
+
+title REGISTRAR USUARIO
+
+PersonaUsuario->IU:Ingresar datos
+IU-->Controller:ValidarDatos(datos)
+IU<--Controller: Confirmar registro
+PersonaUsuario-->IU: Aceptar registro
+IU-->Controller: Validar confirmacion
+Controller-->Usuario: New
+PersonaUsuario-->IU: Iniciar Sesion
+PersonaUsuario-->IU: Ingresar usuario y contraseña
+IU-->Controller: ValidarDatos(datos)
+IU<--Controller: Inicio Correcto
+
