@@ -1,4 +1,4 @@
-Registrar alta de guía
+# Registrar alta de guía
 
 -Ingresar si desea registrarse o iniciar sesión (R/I)
 Si registrarse == ‘r’ se verifica que la letra ingresada sea la correcta, sino se pide nuevamente
@@ -24,7 +24,7 @@ Si registrarse == ‘i’ se verifica que la letra ingresada sea la correcta, si
   	Si registro == ‘s’ llamar a la función registrar_nuevo_guia ()
   	Si registro == ‘n’ “Hasta luego”
 
-Registrar servicio
+# Registrar servicio
 
 -Ingresar si desea registrarse o iniciar sesión (R/I)
 -Si registrarse_o_no == ‘i’ se verifica que la letra ingresada sea la correcta, sino se pide nuevamente
