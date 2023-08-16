@@ -2,6 +2,8 @@
 
 ![diagnostico](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/cbd90e29-224b-4a8d-ab9d-07ff97eccca1)
 
-# Diagramas de Clase
+# Diagramas de Secuencia
 
-![Registrar guia](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/e6ecc7b2-c34e-4201-837b-b7cc88f7bbaf)
+![Captura de pantalla (883)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/2062d881-0901-47f7-92f2-d52212c53377)
+
+![Captura de pantalla (885)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/d7dac8d4-e121-4f6f-86b7-71b017234a62)
