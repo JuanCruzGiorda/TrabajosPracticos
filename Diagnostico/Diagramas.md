@@ -1,6 +1,6 @@
 # Diagrama BPMN
 
-![diagnostico](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/cbd90e29-224b-4a8d-ab9d-07ff97eccca1)
+![diagnostico (1)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/982aefa7-de5a-4f7b-887c-4e7fb05b1a07)
 
 # Diagramas de Secuencia
 
@@ -27,25 +27,25 @@ IU-->Controller: Contraseña
 
 Controller-->Persistencia: Guardar Guia
 
-# Registrar Usuario
+# Registrar Cliente
 
-title REGISTRAR USUARIO
+title REGISTRAR CLIENTE
 
-PersonaUsuario->IU:Ingresar datos
+PersonaCliente->IU:Ingresar datos
 
 IU-->Controller:ValidarDatos(datos)
 
 IU<--Controller: Confirmar registro
 
-PersonaUsuario-->IU: Aceptar registro
+PersonaCliente-->IU: Aceptar registro
 
 IU-->Controller: Validar confirmacion
 
-Controller-->Usuario: New
+Controller-->Cliente: New
 
-PersonaUsuario-->IU: Iniciar Sesion
+PersonaCliente-->IU: Iniciar Sesion
 
-PersonaUsuario-->IU: Ingresar usuario y contraseña
+PersonaCliente-->IU: Ingresar usuario y contraseña
 
 IU-->Controller: ValidarDatos(datos)
 
@@ -54,19 +54,19 @@ IU<--Controller: Inicio Correcto
 # Registrar reserva
 
 title REGISTRAR RESERVA
-PersonaUsuario->IU:Ingresar fecha
+PersonaCliente->IU:Ingresar fecha
 
 IU-->Controller: ServiciosDisponibles(fecha)
 
 IU<--Controller: Mostrar servicios disponibles
 
-PersonaUsuario-->IU: Ingresar numero de servicio a contratar
+PersonaCliente-->IU: Ingresar numero de servicio a contratar
 
 IU-->Controller: ValidarNumeroServicio(numero)
 
 IU<--Controller: Mostrar servicio contratado
 
-PersonaUsuario-->IU:Confirmar reserva
+PersonaCliente-->IU:Confirmar reserva
 
 IU-->Controller:Validar confirmacion
 
