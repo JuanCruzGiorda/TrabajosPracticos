@@ -4,32 +4,72 @@
 
 # Diagramas de Secuencia
 
-Registrar Guia
+# Registrar Guia
 
 title REGISTRAR GUIA	
 PersonaGuia->IU:Ingresar datos
+
 IU-->Controller:ValidadDatos(datos)
+
 Controller -->ValidadorAfip: BuscarCuit(Cuit)
+
 ValidadorAfip -->Contribuyente: New
+
 Controller<--ValidadorAfip: Contribuyente
+
 Controller<--Controller: Comparar datos
+
 Controller-->Guia: New
+
 IU<--Controller: Pedir Contraseña
+
 IU-->Controller: Contraseña
+
 Controller-->Persistencia: Guardar Guia
 
-Registrar Usuario
+# Registrar Usuario
 
 title REGISTRAR USUARIO
 
 PersonaUsuario->IU:Ingresar datos
+
 IU-->Controller:ValidarDatos(datos)
+
 IU<--Controller: Confirmar registro
+
 PersonaUsuario-->IU: Aceptar registro
+
 IU-->Controller: Validar confirmacion
+
 Controller-->Usuario: New
+
 PersonaUsuario-->IU: Iniciar Sesion
+
 PersonaUsuario-->IU: Ingresar usuario y contraseña
+
 IU-->Controller: ValidarDatos(datos)
+
 IU<--Controller: Inicio Correcto
+
+# Registrar reserva
+
+title REGISTRAR RESERVA
+PersonaUsuario->IU:Ingresar fecha
+
+IU-->Controller: ServiciosDisponibles(fecha)
+
+IU<--Controller: Mostrar servicios disponibles
+
+PersonaUsuario-->IU: Ingresar numero de servicio a contratar
+
+IU-->Controller: ValidarNumeroServicio(numero)
+
+IU<--Controller: Mostrar servicio contratado
+
+PersonaUsuario-->IU:Confirmar reserva
+
+IU-->Controller:Validar confirmacion
+
+Controller-->Reserva: New
+
 
