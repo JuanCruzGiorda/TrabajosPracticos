@@ -1,6 +1,7 @@
 # PROCESO DE NEGOCIO
 
-![image-1](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/be45e2f6-1df9-4a59-b825-93de5e6a470f)
+![3-turnero](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/98829c4a-b841-46ee-81e6-96bb5eb5033a)
+
 
 ![image-2](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/3abc2c01-19d4-468a-b463-67989a41959b)
 
