@@ -7,6 +7,7 @@
 # Registrar Guia
 
 title REGISTRAR GUIA	
+
 PersonaGuia->IU:Ingresar datos
 
 IU-->Controller:ValidadDatos(datos)
