@@ -22,8 +22,76 @@
 
 ![Turnero - Diseño de Sistemas (6)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/8cdf77b0-6524-4fe3-8b14-2592bff0b537)
 
-# DIAGRAMA DE CLASES Y COLABORACIÓN
+# DIAGRAMAS DE SECUENCIA
 
-![TurneroDiagramaSecuencia](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/0ee46b48-8f16-4b22-89fc-fd875bd97655)
+# Registrar paciente
+
+title Registrar Paciente
+
+PersonaPaciente->IU: Ingresar datos
+
+IU-->Controller: Validar_datos(datos)
+
+IU<--Controller: Confirmacion de registro
+
+Controller-->Persistencia: Registrar nuevo paciente
+
+Persistencia-->Paciente: New
+
+# Registrar turno
+
+title Registrar Turno
+
+Paciente->IU: Ingresar dni
+
+IU-->Controller: Validar_identidad(dni)
+
+Controller-->Persistencia: Validar_identidad(dni)
+
+Controller<--Persistencia: Confirmar identidad(o no)
+
+IU<--Controller: Pedir datos del turno
+
+Paciente-->IU: Ingresar datos
+
+IU-->Controller: Validar_datos(datos)
+
+Controller-->Persistencia: Validar_datos(datos)
+
+Controller<--Persistencia: Datos validados(o no)
+
+IU<--Controller: Confirmacion de turno
+
+Paciente-->IU: Confirmar turno
+
+IU-->Controller: Verificar_confirmacion()
+
+Controller-->Persistencia: Registrar turno
+
+Persistencia-->Turno: New
+
+# Búsqueda de turno
+
+title Turnos
+Paciente-->IU: Seleccion con turno
+
+Paciente-->IU: Ingresar dni
+
+IU-->Controller: Verificar_existencia(dni)
+
+Controller-->Persistencia: Verificar_existencia_turno(dni)
+
+Controller<--Persistencia: turno existente(o no)
+
+IU<--Controller: Seleccion de turno
+
+Paciente-->IU: Seleccionar turno
+
+IU-->Controller: Generar_Codigo()
+
+Controller-->Persistencia: Guardar Codigo
+
+IU<--Controller: Mostrar codigo
+
 
 
