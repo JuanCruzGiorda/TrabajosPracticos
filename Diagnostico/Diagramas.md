@@ -6,15 +6,13 @@
 
 # Registrar Guia
 
-title REGISTRAR GUIA	
+title REGISTRAR GUIA
 
 PersonaGuia->IU:Ingresar datos
 
-IU-->Controller:ValidadDatos(datos)
+IU-->Controller:ValidarDatos(datos)
 
 Controller -->ValidadorAfip: BuscarCuit(Cuit)
-
-ValidadorAfip -->Contribuyente: New
 
 Controller<--ValidadorAfip: Contribuyente
 
@@ -23,6 +21,8 @@ Controller<--Controller: Comparar datos
 Controller-->Guia: New
 
 IU<--Controller: Pedir Contraseña
+
+PersonaGuia-->IU: Ingresar contraseña
 
 IU-->Controller: Contraseña
 
@@ -36,21 +36,15 @@ PersonaCliente->IU:Ingresar datos
 
 IU-->Controller:ValidarDatos(datos)
 
-IU<--Controller: Confirmar registro
+IU<--Controller: Confirmar registro (o no)
 
 PersonaCliente-->IU: Aceptar registro
 
-IU-->Controller: Validar confirmacion
+IU-->Controller: Validar confirmacion()
 
 Controller-->Cliente: New
 
-PersonaCliente-->IU: Iniciar Sesion
-
-PersonaCliente-->IU: Ingresar usuario y contraseña
-
-IU-->Controller: ValidarDatos(datos)
-
-IU<--Controller: Inicio Correcto
+Controller-->Persistencia: Guardar cliente
 
 # Registrar reserva
 
@@ -60,11 +54,17 @@ PersonaCliente->IU:Ingresar fecha
 
 IU-->Controller: ServiciosDisponibles(fecha)
 
+Controller-->Persistencia: ServiciosDisponibles(fecha)
+
+Controller<--Persistencia: Servicios disponibles
+
 IU<--Controller: Mostrar servicios disponibles
 
 PersonaCliente-->IU: Ingresar numero de servicio a contratar
 
 IU-->Controller: ValidarNumeroServicio(numero)
+
+Controller-->Persistencia: ValidarNumeroServicio(numero)
 
 IU<--Controller: Mostrar servicio contratado
 
@@ -73,5 +73,7 @@ PersonaCliente-->IU:Confirmar reserva
 IU-->Controller:Validar confirmacion
 
 Controller-->Reserva: New
+
+Controller-->Persistencia: Guardar reserva
 
 
