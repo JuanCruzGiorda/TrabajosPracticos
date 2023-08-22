@@ -28,6 +28,30 @@ IU-->Controller: Contraseña
 
 Controller-->Persistencia: Guardar Guia
 
+# Registrar Servicios
+
+title REGISTRAR SERVICIOS
+
+Guia-->IU: Ingresar mail y contraseña
+
+IU-->Controller: Validar_datos(datos)
+
+Controller-->Persistencia: Validar_datos(datos)
+
+Controller<--Persistencia: Ingreso correcto(o no)
+
+IU<--Controller: Sesion iniciada
+
+Guia-->IU: Ingresar información del servicio
+
+IU-->Controller: Verificar_información()
+
+IU<--Controller: Servicio creado con éxito
+
+Controller-->Servicio: New
+
+Controller-->Persistencia: Guardar servicio
+
 # Registrar Cliente
 
 title REGISTRAR CLIENTE
@@ -75,5 +99,3 @@ IU-->Controller:Validar confirmacion
 Controller-->Reserva: New
 
 Controller-->Persistencia: Guardar reserva
-
-
