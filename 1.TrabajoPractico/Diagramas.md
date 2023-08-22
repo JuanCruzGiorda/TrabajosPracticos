@@ -8,11 +8,15 @@
 
 title LOGUEAR USUARIO
 
-PersonaUsuario->IU:Ingresar datos
+PersonaUsuario->IU: Ingresar usuario y contraseña 
 
-IU-->Controller:ValidarDatos(datos)
+IU-->Controller: Validar_datos(datos)
 
-IU<--Controller: Datos validados
+Controller-->Persistencia: Validar_datos(datos)
+
+Controller<--Persistencia: Datos correctos(o no)
+
+IU<--Controller: Ingreso correcto
 
 PersonaUsuario-->IU: Iniciar Sesion
 
@@ -20,21 +24,29 @@ PersonaUsuario-->IU: Iniciar Sesion
 
 title REGISTRAR CONTROL
 
-PersonaUsuario->IU:Seleccionar Punto de Control
+Usuario->IU: Seleccionar Punto de Control
 
-IU-->Controller:CargarPuntoControl(idPunto)
+IU-->Controller: CargarPuntoControl(idPunto)
 
-IU<--Controller:Información de Punto de Control
+Controller-->Persistencia: CargarPuntoControl(idPunto)
 
-PersonaUsuario-->IU: Ingresar datos del producto a controlar
+Controller<--Persistencia: Punto de control correcto(o no)
 
-IU-->Controller: CargarProducto(idProducto)
+IU<--Controller:Información del Punto de Control
 
-PersonaUsuario->IU:Registrar Resultado (Ok/NoOk)
+Usuario-->IU: Ingresar datos del producto a controlar
 
-PersonaUsuario->IU:Cargar Medición (si aplica)
+IU-->Controller: CargarProducto(datos)
+
+Usuario-->IU:Registrar Resultado (Ok/NoOk)
+
+Usuario-->IU:Cargar Medición (si aplica)
 
 IU-->Controller:RegistrarResultado(idPunto, resultado, medición)
 
-IU<--Controller:Resultado Registrado
+Controller-->Control: New
+
+Controller-->Persistencia: Guardar resultado
+
+IU<--Controller: Resultado Registrado
 
