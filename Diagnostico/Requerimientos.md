@@ -4,7 +4,7 @@
 
 Registro de Guías Turísticos:
 
-    -Los guías deben poder registrarse proporcionando sus datos personales.
+    -Los guías deben poder registrarse proporcionando sus datos personales (nombre, apellido, dni, cuit, domicilio, telefono, email, ciudad, pais de residencia).
 
     -Debe haber una validación del CUIT a través del Web Service de AFIP para verificar la habilitación.
 
@@ -16,7 +16,7 @@ Registro de Ofertas de Servicios Turísticos:
 
     -Los guías turísticos deben poder registrar nuevas ofertas de servicios.
 
-    -Se debe poder ingresar diferentes tipos de información.
+    -Se debe poder ingresar diferentes tipos de información (titulo, descripcion, ubicacion en coordenadas, precio por persona, fecha y hora de inicio, tipo de servicio ofrecido.
 
 Consulta de Oferta de Servicios Turísticos:
 
@@ -24,19 +24,17 @@ Consulta de Oferta de Servicios Turísticos:
 
 Registro de Usuarios:
 
-    -Los usuarios deben poder registrarse proporcionando sus datos personales.
+    -Los usuarios deben poder registrarse proporcionando sus datos personales (nombre, apellido, DNI, CUIT, domicilio, teléfono, email, ciudad, país de residencia).
 
 Reserva de Servicios Turísticos:
 
     -Los usuarios registrados deben poder reservar servicios turísticos.
   
-    -Se debe poder seleccionar los servicios deseados, fecha y cantidad de personas.
-  
-    -El sistema debe calcular el importe de la reserva (50% del costo total).
+    -Se debe poder seleccionar los servicios deseados, fecha y cantidad de personas (por cada persona que integra el grupo se debe ingresar nombre, apellido y DNI).
   
     -Debe haber opción para pagar la reserva con tarjeta de crédito.
   
-    -Debe generarse un voucher provisorio si el pago es exitoso.
+    -Debe generarse un voucher provisorio que se envía por email, si el pago es exitoso.
 
 Pago de Saldo y Emisión de Vouchers Definitivos:
 
@@ -46,7 +44,7 @@ Pago de Saldo y Emisión de Vouchers Definitivos:
 
 Generación de Listado de Insumos:
 
-    -El área de logística debe poder generar un listado de insumos necesarios para los servicios contratados próximos a realizarse.
+    -Desde el área de logística se debe poder generar un listado de insumos necesarios para los servicios contratados próximos a realizarse.
   
     -El listado debe agrupar por tipo de servicio y cantidad de personas.
 
