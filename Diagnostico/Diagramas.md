@@ -8,7 +8,7 @@
 
 title REGISTRAR GUIA
 
-PersonaGuia->IU:Ingresar datos
+PersonaGuia->IU:Ingresar datos personales (nombre, dni, cuit, etc)
 
 IU-->Controller:ValidarDatos(datos)
 
@@ -56,7 +56,7 @@ Controller-->Persistencia: Guardar servicio
 
 title REGISTRAR CLIENTE
 
-PersonaCliente->IU:Ingresar datos
+PersonaCliente->IU:Ingresar datos personales (nombre, dni, etc)
 
 IU-->Controller:ValidarDatos(datos)
 
