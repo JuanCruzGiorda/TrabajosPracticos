@@ -2,6 +2,10 @@
 
 ![0-diagnostico](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/d5e79744-8c92-45e5-9d72-ca1ddb01fdf0)
 
+# Diagrama de clase - Registro de servicios
+
+![Main](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/50671a48-bd58-4e1e-909b-4a8669cda5b9)
+
 # Diagramas de Secuencia
 
 # Registrar Guia
