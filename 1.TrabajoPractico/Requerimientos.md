@@ -5,8 +5,6 @@
 Registro de Usuarios:
     
 	-Permitir la creacion de usuarios con roles especificos (controladores, supervisores, administradores, etc)
-		  
-	-Autentificacion segura para el acceso al sistema
 
 Gestión de información:
 
@@ -46,7 +44,7 @@ Generación de reportes:
 
 Seguridad:
 
-	-Implementar autentificación y autotrización segurar para garantizar que solo usuarios autorizados puedan acceder y realizar cambios
+	-Implementar autentificación y autotrización segura para garantizar que solo usuarios autorizados puedan acceder y realizar cambios
 	   
 	-Garantizar la protección de los datos importantes almacenados en el sistema
 
