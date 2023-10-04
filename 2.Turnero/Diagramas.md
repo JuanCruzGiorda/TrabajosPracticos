@@ -1,9 +1,3 @@
-# PROCESO DE NEGOCIO
-
-![3-turnero](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/13bc5504-91fe-48fb-84c9-0f0577f1e692)
-
-![image-2](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/3abc2c01-19d4-468a-b463-67989a41959b)
-
 # PROTOTIPO
 
 ![Turnero - Diseño de Sistemas](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/26df90bf-925f-480b-bbd2-56716b9ff257)
@@ -21,6 +15,16 @@
 # DESCRIPCION DE LA ARQUITECTURA
 
 ![Turnero - Diseño de Sistemas (6)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/8cdf77b0-6524-4fe3-8b14-2592bff0b537)
+
+# PROCESO DE NEGOCIO
+
+![3-turnero](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/13bc5504-91fe-48fb-84c9-0f0577f1e692)
+
+![image-2](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/3abc2c01-19d4-468a-b463-67989a41959b)
+
+# Diagrama de Clase
+
+![Main](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/665c3a29-c5b0-4c1b-a043-17387750387d)
 
 # DIAGRAMAS DE SECUENCIA
 
