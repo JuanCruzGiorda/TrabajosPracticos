@@ -10,9 +10,9 @@ title LOGUEAR USUARIO
 
 PersonaUsuario->IU: Ingresar usuario y contraseña 
 
-IU-->Controller: Validar_datos(datos)
+IU-->Controller: Validar_datos(usuario, contraseña)
 
-Controller-->Persistencia: Validar_datos(datos)
+Controller-->Persistencia: Validar_datos(usuario, contraseña)
 
 Controller<--Persistencia: Datos correctos(o no)
 
@@ -44,9 +44,8 @@ Usuario-->IU:Cargar Medición (si aplica)
 
 IU-->Controller:RegistrarResultado(idPunto, resultado, medición)
 
-Controller-->Control: New
-
 Controller-->Persistencia: Guardar resultado
 
-IU<--Controller: Resultado Registrado
+Controller-->Control: New
 
+IU<--Controller: Resultado Registrado
