@@ -22,13 +22,13 @@ Consulta de Oferta de Servicios Turísticos:
 
     -Los usuarios deben poder buscar y consultar la oferta de servicios turísticos por tipo y ubicación.
 
-Registro de Usuarios:
+Registro de Cliente:
 
-    -Los usuarios deben poder registrarse proporcionando sus datos personales (nombre, apellido, DNI, CUIT, domicilio, teléfono, email, ciudad, país de residencia).
+    -Los clientes deben poder registrarse proporcionando sus datos personales (nombre, apellido, DNI, CUIT, domicilio, teléfono, email, ciudad, país de residencia).
 
 Reserva de Servicios Turísticos:
 
-    -Los usuarios registrados deben poder reservar servicios turísticos.
+    -Los clientes registrados deben poder reservar servicios turísticos.
   
     -Se debe poder seleccionar los servicios deseados, fecha y cantidad de personas (por cada persona que integra el grupo se debe ingresar nombre, apellido y DNI).
   
@@ -38,9 +38,9 @@ Reserva de Servicios Turísticos:
 
 Pago de Saldo y Emisión de Vouchers Definitivos:
 
-    -Los usuarios deben poder abonar el saldo restante en varios pagos.
+    -Los clientes deben poder abonar el saldo restante en varios pagos.
   
-    -El sistema debe enviar el voucher definitivo por email al usuario una vez que el saldo esté totalmente pago.
+    -El sistema debe enviar el voucher definitivo por email al cliente una vez que el saldo esté totalmente pago.
 
 Generación de Listado de Insumos:
 
@@ -76,13 +76,13 @@ Registro de Problemas y Feedback:
 
 Seguridad:
 
-    -El sistema debe garantizar la privacidad de los datos personales y de pago de los usuarios.
+    -El sistema debe garantizar la privacidad de los datos personales y de pago de los clientes.
   
     -La información de las transacciones de tarjeta de crédito debe ser segura y cumplir con estándares de seguridad.
 
 Usabilidad:
 
-    -La interfaz de usuario debe ser intuitiva y fácil de usar tanto para guías como para usuarios.
+    -La interfaz de usuario debe ser intuitiva y fácil de usar tanto para guías como para clientes.
   
     -Los procesos de registro, reserva y pago deben ser simples.
 
