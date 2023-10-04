@@ -28,11 +28,11 @@
 
 title Registrar Paciente
 
-PersonaPaciente->IU: Ingresar datos
+PersonaPaciente->IU: Ingresar datos personales(noombre, dni, obra social, telefono)
 
-IU-->Controller: Validar_datos(datos)
+IU-->Controller: Validar_datos(datos personales)
 
-IU<--Controller: Confirmacion de registro
+IU<--Controller: Confirmacion de registro(o no)
 
 Controller-->Persistencia: Registrar nuevo paciente
 
@@ -50,9 +50,9 @@ Controller-->Persistencia: Validar_identidad(dni)
 
 Controller<--Persistencia: Confirmar identidad(o no)
 
-IU<--Controller: Pedir datos del turno
+IU<--Controller: Pedir datos del turno 
 
-Paciente-->IU: Ingresar datos
+Paciente-->IU: Ingresar datos (doctor, fecha)
 
 IU-->Controller: Validar_datos(datos)
 
@@ -92,6 +92,3 @@ IU-->Controller: Generar_Codigo()
 Controller-->Persistencia: Guardar Codigo
 
 IU<--Controller: Mostrar codigo
-
-
-
