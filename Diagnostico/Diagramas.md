@@ -1,6 +1,6 @@
 # Diagrama BPMN
 
-![diagnostico (1)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/982aefa7-de5a-4f7b-887c-4e7fb05b1a07)
+![0-diagnostico](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/d5e79744-8c92-45e5-9d72-ca1ddb01fdf0)
 
 # Diagramas de Secuencia
 
@@ -32,43 +32,43 @@ Controller-->Persistencia: Guardar Guia
 
 title REGISTRAR SERVICIOS
 
-Guia-->IU: Ingresar mail y contraseña
+Guia-->IU: Ingresar email y contraseña
 
-IU-->Controller: Validar_datos(datos)
+IU-->Controller: Validar_datos(email,contraseña)
 
-Controller-->Persistencia: Validar_datos(datos)
+Controller-->Persistencia: Validar_datos(email,contraseña)
 
 Controller<--Persistencia: Ingreso correcto(o no)
 
 IU<--Controller: Sesion iniciada
 
-Guia-->IU: Ingresar información del servicio
+Guia-->IU: Ingresar información del servicio (titulo, descripción, coordenadas, precio por persona, fecha y hora de inicio, tipo de servicio)
 
-IU-->Controller: Verificar_información()
+IU-->Controller: Verificar_información(titulo, descripción, coordenadas, precio por persona, fecha y hora de inicio, tipo de servicio)
 
 IU<--Controller: Servicio creado con éxito
 
-Controller-->Servicio: New
-
 Controller-->Persistencia: Guardar servicio
+
+Controller-->Servicio: New
 
 # Registrar Cliente
 
 title REGISTRAR CLIENTE
 
-PersonaCliente->IU:Ingresar datos personales (nombre, dni, etc)
+PersonaCliente->IU:Ingresar datos personales (nombre, apellido, DNI, CUIT, domicilio, teléfono, email, ciudad, país de residencia)
 
-IU-->Controller:ValidarDatos(datos)
+IU-->Controller:ValidarDatos(datos personales)
 
 IU<--Controller: Confirmar registro (o no)
 
-PersonaCliente-->IU: Aceptar registro
+PersonaCliente-->IU: Aceptar registro (si o no)
 
-IU-->Controller: Validar confirmacion()
-
-Controller-->Cliente: New
+IU-->Controller: Validar confirmacion(si o no)
 
 Controller-->Persistencia: Guardar cliente
+
+Controller-->Cliente: New
 
 # Registrar reserva
 
@@ -92,10 +92,22 @@ Controller-->Persistencia: ValidarNumeroServicio(numero)
 
 IU<--Controller: Mostrar servicio contratado
 
-PersonaCliente-->IU:Confirmar reserva
+PersonaCliente-->IU:Confirmar reserva(si o no)
 
-IU-->Controller:Validar confirmacion
+IU-->Controller:Validar confirmacion(si o no)
 
-Controller-->Reserva: New
+IU<--Controller: Pagar
+
+PersonaCliente-->IU: Ingresar tarjeta de credito
+
+IU-->Controller: Validar_tarjeta(datos de tarjeta)
+
+Controller-->Gateway:Validar_tarjeta(datos de tarjeta)
+
+Controller<--Gateway: Pago exitoso(o no)
+
+IU<--Controller: Pago exitoso(o no)
 
 Controller-->Persistencia: Guardar reserva
+
+Controller-->Reserva: New
