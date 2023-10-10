@@ -96,3 +96,6 @@ IU-->Controller: Generar_Codigo()
 Controller-->Persistencia: Guardar Codigo
 
 IU<--Controller: Mostrar codigo
+
+# MAPEO DE OBJETOS A TABLAS
+![drawSQL-turnero-export-2023-10-10](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/ae3347b7-07da-44b1-9bb8-eb1a7481e5f0)
