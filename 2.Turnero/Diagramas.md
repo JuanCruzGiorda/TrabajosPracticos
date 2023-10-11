@@ -61,11 +61,9 @@ Descripción de cada frontend:
 
 ![3-turnero](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/13bc5504-91fe-48fb-84c9-0f0577f1e692)
 
-![image-2](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/3abc2c01-19d4-468a-b463-67989a41959b)
-
 # Diagrama de Clase
 
-![Main](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/665c3a29-c5b0-4c1b-a043-17387750387d)
+![Main](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/7603e929-e27f-4225-ba42-6c3aeff0c4c2)
 
 # DIAGRAMAS DE SECUENCIA
 
