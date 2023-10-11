@@ -32,7 +32,7 @@
 
 title Registrar Paciente
 
-PersonaPaciente->IU: Ingresar datos personales(noombre, dni, obra social, telefono)
+PersonaPaciente->IU: Ingresar datos personales(nombre, dni, obra social, telefono)
 
 IU-->Controller: Validar_datos(datos personales)
 
