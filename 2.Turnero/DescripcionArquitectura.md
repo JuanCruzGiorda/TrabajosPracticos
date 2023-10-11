@@ -1,3 +1,5 @@
+Arquitectura
+
 Pensamos nuestro sistema como una arquitectura Cliente - Servidor, donde se accede a la app a través de un navegador, y en el cuál el código de la interfaz se encuentra separado del backend. Todo el sistema se instala en un servidor interno de la clínica, y sólo se puede acceder al sistema desde una red local.
 
 Backend
