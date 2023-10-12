@@ -20,13 +20,15 @@ title REGISTRAR GUIA
 
 PersonaGuia->IU:Ingresar datos personales (nombre, dni, cuit, etc)
 
-IU-->Controller:ValidarDatos(datos)
+IU-->Controller:ValidarDatos(datos personales)
 
 Controller -->ValidadorAfip: BuscarCuit(Cuit)
 
 Controller<--ValidadorAfip: Contribuyente
 
 Controller<--Controller: Comparar datos
+
+Controller-->Persistencia: Guardar Guia
 
 Controller-->Guia: New
 
@@ -35,8 +37,6 @@ IU<--Controller: Pedir Contraseña
 PersonaGuia-->IU: Ingresar contraseña
 
 IU-->Controller: Contraseña
-
-Controller-->Persistencia: Guardar Guia
 
 # Registrar Servicios
 
