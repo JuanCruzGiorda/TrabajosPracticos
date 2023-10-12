@@ -1,6 +1,12 @@
-# Diagrama BPMN
+# Diagramas BPMN
 
-![0-diagnostico](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/d5e79744-8c92-45e5-9d72-ca1ddb01fdf0)
+Registro de cliente y guia
+
+![0-diagnostico (1)](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/5b9b090c-cd76-44c4-87d5-e81a742352d7)
+
+Venta de servicio
+
+![0-1-diagn-stico](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/764429ca-1f83-4a30-bfa6-7b7dee32a868)
 
 # Diagrama de clase - Registro de servicios
 
