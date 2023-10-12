@@ -20,7 +20,9 @@ title REGISTRAR GUIA
 
 PersonaGuia->IU:Ingresar datos personales (nombre, dni, cuit, etc)
 
-IU-->Controller:ValidarDatos(datos personales)
+IU-->Controller: Datos personales
+
+Controller-->Controller: ValidarDatos(datos personales)
 
 Controller -->ValidadorAfip: BuscarCuit(Cuit)
 
@@ -28,15 +30,11 @@ Controller<--ValidadorAfip: Contribuyente
 
 Controller<--Controller: Comparar datos
 
+IU<--Controller: Registro correcto (o no)
+
 Controller-->Persistencia: Guardar Guia
 
 Controller-->Guia: New
-
-IU<--Controller: Pedir Contraseña
-
-PersonaGuia-->IU: Ingresar contraseña
-
-IU-->Controller: Contraseña
 
 # Registrar Servicios
 
@@ -44,7 +42,7 @@ title REGISTRAR SERVICIOS
 
 Guia-->IU: Ingresar email y contraseña
 
-IU-->Controller: Validar_datos(email,contraseña)
+IU-->Controller: Email y contraseña 
 
 Controller-->Persistencia: Validar_datos(email,contraseña)
 
@@ -54,7 +52,9 @@ IU<--Controller: Sesion iniciada
 
 Guia-->IU: Ingresar información del servicio (titulo, descripción, coordenadas, precio por persona, fecha y hora de inicio, tipo de servicio)
 
-IU-->Controller: Verificar_información(titulo, descripción, coordenadas, precio por persona, fecha y hora de inicio, tipo de servicio)
+IU-->Controller: información del servicio
+
+Controller-->Controller: Verificar_información(titulo, descripción, coordenadas, precio por persona, fecha y hora de inicio, tipo de servicio)
 
 IU<--Controller: Servicio creado con éxito
 
@@ -68,13 +68,17 @@ title REGISTRAR CLIENTE
 
 PersonaCliente->IU:Ingresar datos personales (nombre, apellido, DNI, CUIT, domicilio, teléfono, email, ciudad, país de residencia)
 
-IU-->Controller:ValidarDatos(datos personales)
+IU-->Controller: Datos personales
+
+Controller-->Controller: ValidarDatos(datos personales)
 
 IU<--Controller: Confirmar registro (o no)
 
-PersonaCliente-->IU: Aceptar registro (si o no)
+PersonaCliente-->IU: Confirmar registro (si o no)
 
-IU-->Controller: Validar confirmacion(si o no)
+IU-->Controller: Confirmacion de registro
+
+Controller-->Controller: Validar confirmacion(si o no)
 
 Controller-->Persistencia: Guardar cliente
 
@@ -86,7 +90,7 @@ title REGISTRAR RESERVA
 
 PersonaCliente->IU:Ingresar fecha
 
-IU-->Controller: ServiciosDisponibles(fecha)
+IU-->Controller: Fecha del servicio
 
 Controller-->Persistencia: ServiciosDisponibles(fecha)
 
@@ -96,21 +100,25 @@ IU<--Controller: Mostrar servicios disponibles
 
 PersonaCliente-->IU: Ingresar numero de servicio a contratar
 
-IU-->Controller: ValidarNumeroServicio(numero)
+IU-->Controller: Numero de servicio
 
 Controller-->Persistencia: ValidarNumeroServicio(numero)
+
+Controller<--Persistencia: Informacion del servicio
 
 IU<--Controller: Mostrar servicio contratado
 
 PersonaCliente-->IU:Confirmar reserva(si o no)
 
-IU-->Controller:Validar confirmacion(si o no)
+IU-->Controller: Confirmación
+
+Controller-->Controller: Validar_Confirmación()
 
 IU<--Controller: Pagar
 
 PersonaCliente-->IU: Ingresar tarjeta de credito
 
-IU-->Controller: Validar_tarjeta(datos de tarjeta)
+IU-->Controller: Tarjeta de crédito
 
 Controller-->Gateway:Validar_tarjeta(datos de tarjeta)
 
