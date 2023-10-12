@@ -10,7 +10,7 @@ title LOGUEAR USUARIO
 
 PersonaUsuario->IU: Ingresar usuario y contraseña 
 
-IU-->Controller: Validar_datos(usuario, contraseña)
+IU-->Controller: usuario, contraseña
 
 Controller-->Persistencia: Validar_datos(usuario, contraseña)
 
@@ -26,7 +26,7 @@ title REGISTRAR CONTROL
 
 Usuario->IU: Seleccionar Punto de Control
 
-IU-->Controller: CargarPuntoControl(idPunto)
+IU-->Controller: PuntoControl(idPunto)
 
 Controller-->Persistencia: CargarPuntoControl(idPunto)
 
@@ -36,7 +36,9 @@ IU<--Controller:Información del Punto de Control
 
 Usuario-->IU: Ingresar datos del producto a controlar
 
-IU-->Controller: CargarProducto(datos)
+IU-->Controller: datos del producto
+
+Controller-->Persistencia: CargarProducto(datos)
 
 Usuario-->IU:Registrar Resultado (Ok/NoOk)
 
