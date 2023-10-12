@@ -73,7 +73,9 @@ title Registrar Paciente
 
 PersonaPaciente->IU: Ingresar datos personales(nombre, dni, obra social, telefono)
 
-IU-->Controller: Validar_datos(datos personales)
+IU-->Controller: Datos personales
+
+Controller-->Controller: Validar_datos(datos personales)
 
 IU<--Controller: Confirmacion de registro(o no)
 
@@ -87,7 +89,7 @@ title Registrar Turno
 
 Paciente->IU: Ingresar dni
 
-IU-->Controller: Validar_identidad(dni)
+IU-->Controller: dni
 
 Controller-->Persistencia: Validar_identidad(dni)
 
@@ -97,7 +99,7 @@ IU<--Controller: Pedir datos del turno
 
 Paciente-->IU: Ingresar datos (doctor, fecha)
 
-IU-->Controller: Validar_datos(datos)
+IU-->Controller: doctor, fecha
 
 Controller-->Persistencia: Validar_datos(datos)
 
@@ -107,7 +109,9 @@ IU<--Controller: Confirmacion de turno
 
 Paciente-->IU: Confirmar turno
 
-IU-->Controller: Verificar_confirmacion()
+IU-->Controller: Confirmación
+
+Controller-->Controller: Verificar_Confirmacion()
 
 Controller-->Persistencia: Registrar turno
 
