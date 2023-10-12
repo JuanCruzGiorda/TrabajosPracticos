@@ -59,7 +59,7 @@ Descripción de cada frontend:
 
 # PROCESO DE NEGOCIO
 
-![3-turnero](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/13bc5504-91fe-48fb-84c9-0f0577f1e692)
+![2-turnero](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/560ef858-74d4-4284-add7-2e9aa777c2b6)
 
 # Diagrama de Clase
 
@@ -113,28 +113,49 @@ Controller-->Persistencia: Registrar turno
 
 Persistencia-->Turno: New
 
-# Búsqueda de turno
+# Búsqueda de turno (con turno previo)
 
-title Turnos
-Paciente-->IU: Seleccion con turno
+title Proceso Turnero (turno previo)
 
-Paciente-->IU: Ingresar dni
+Paciente-->IU: Seleccionar opción con turno
 
-IU-->Controller: Verificar_existencia(dni)
+IU-->Controller: Solicitar ingreso de Dni
 
-Controller-->Persistencia: Verificar_existencia_turno(dni)
+IU<--Controller: Mostrar campo para ingresar Dni
 
-Controller<--Persistencia: turno existente(o no)
+Paciente-->IU: Ingresar Dni
 
-IU<--Controller: Seleccion de turno
+IU-->Controller: Verificar_existencia_turno(Dni)
+
+Controller-->Persistencia: Verificar_existencia_turno(Dni)
+
+Controller<--Persistencia: Lista de turnos existentes
+
+IU<--Controller: Mostrar lista de turnos
 
 Paciente-->IU: Seleccionar turno
 
-IU-->Controller: Generar_Codigo()
+IU-->Controller: Enviar turno seleccionado
 
-Controller-->Persistencia: Guardar Codigo
+Controller-->Persistencia: Confirmar turno
 
-IU<--Controller: Mostrar codigo
+Controller<--Persistencia: Codigo de fila
+
+IU<--Controller: Mostrar codigo de fila
+
+# Búsqueda de turno (sin turno previo)
+
+title Proceso Turnero (sin turno previo)
+
+Paciente-->IU: Seleccionar opción sin turno
+
+IU-->Controller: Solicitud de generación de código
+
+Controller<--Controller: Generar código
+
+Controller-->Persistencia: Guardar código
+
+IU<--Controller: Mostrar código
 
 # MAPEO DE OBJETOS A TABLAS
 ![drawSQL-turnero-export-2023-10-10](https://github.com/JuanCruzGiorda/TrabajosPracticos/assets/114437428/ae3347b7-07da-44b1-9bb8-eb1a7481e5f0)
