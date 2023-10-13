@@ -6,8 +6,6 @@ Registro de Guías Turísticos:
 
     -Los guías deben poder registrarse proporcionando sus datos personales (nombre, apellido, dni, cuit, domicilio, telefono, email, ciudad, pais de residencia).
 
-    -Debe haber una validación del CUIT a través del Web Service de AFIP para verificar la habilitación.
-
 Creación de Tipos de Servicios:
 
     -Los guías deben tener la opción de dar de alta nuevos tipos de servicios turísticos.
