@@ -1,1 +1,0 @@
-# Fabricación Máquinas Agrícolas
