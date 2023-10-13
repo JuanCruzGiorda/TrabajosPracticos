@@ -1,0 +1,1 @@
+# Patrón de diseño Prototype
